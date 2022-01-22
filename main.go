@@ -36,11 +36,10 @@ func main() {
 		panic(err)
 	}
 
-	var menus string
 	var seguir string
 
 	for {
-		switch menus {
+		switch menu_principal {
 		case "m.p":
 			fmt.Println(menu_principal)
 			_, err = fmt.Scanf("%s", &menu_principal)
