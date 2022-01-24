@@ -24,8 +24,8 @@ func main() {
 	3) Eliminar una entrada del foro
 	4) Volver al menu principal`
 
-	var seguir string
 	opcion_menu_principal := 0
+	opcion_menu_perfil := 0
 
 	for {
 		switch opcion_menu_principal {
@@ -36,10 +36,21 @@ func main() {
 				panic(err)
 			}
 
-			if opcion_menu_principal == 1 {
-				fmt.Println("Su contraseña a sido cambiada con exito")
+		case 1:
+			fmt.Println("tu contraseña a sido cambiada con exito!!!")
+			opcion_menu_principal = 0
+		case 2:
+			fmt.Println(menu_perfil)
+			_, err := fmt.Scanf("%s", &opcion_menu_perfil)
+			if err != nil {
+				panic(err)
 			}
+		case 4:
+			fmt.Println("gracias por visitarnos!!")
 
+		}
+		if opcion_menu_principal == 4 {
+			break
 		}
 
 	}
